@@ -1,0 +1,26 @@
+.fx {
+    color: black;
+    position: relative;
+}
+
+.fx::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fx:hover::before {
+    width: 100%;
+    padding-right: 1em;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.15s ease-out;
+}

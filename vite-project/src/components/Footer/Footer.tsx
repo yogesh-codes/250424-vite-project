@@ -4,10 +4,10 @@ import FooterList from "./FooterList/FooterList";
 
 function Footer() {
     return (
-        <footer className="container-fluid blurbg d-flex justify-content-center">
+        <footer className="mt-5 container-fluid blurbg d-flex justify-content-center">
             <div style={{ maxWidth: "40em" }}>
                 <div>
-                    <div className="pb-3"></div>
+                    <div className="p-1"></div>
                     <div className="d-flex flex-direction-row gap-5 justify-content-start">
                         <FooterList
                             listTitle="My Projects"
@@ -39,7 +39,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="pb-5"></div>
+                <div className="pb-2"></div>
                 <div>&copy;2025 Yogesh Venkatesa Perumal</div>
                 <div className="pb-3"></div>
             </div>

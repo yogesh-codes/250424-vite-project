@@ -4,3 +4,48 @@ header {
 
     min-height: 5em;
 }
+
+.nav-link {
+    text-decoration-style: none;
+    transition: text-decoration-line 1s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+
+    left: 0;
+    bottom: 0.4em;
+}
+
+.nav-link.active::after {
+    animation: doAnimation 0.24s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.nav-link:not(.active)::after {
+    animation: undoAnimation 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes doAnimation {
+    0% {
+        background-color: transparent;
+        width: 0px;
+    }
+    50% {
+        background-color: grey;
+    }
+
+    100% {
+        background-color: green;
+        width: 100%;
+    }
+}

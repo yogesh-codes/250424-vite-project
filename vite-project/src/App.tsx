@@ -1,20 +1,27 @@
 import { useState } from "react";
-import bg_wallpaper from "bg-1.webp";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 //Components
-import Header from "./components/Header/Header";
-import TodoPage from "./components/TodoPage/TodoPage";
-import Footer from "./components/Footer/Footer";
+import TodosPage from "./components/TodosPage/TodosPage";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import UserLoginPage from "./components/UserLoginPage/UserLoginPage";
+import AboutPage from "./components/AboutPage/AboutPage";
 
 function App() {
     return (
-        <div>
-            <Header />
-            <TodoPage />
-            <Footer />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/login" element={<UserLoginPage />} />
+                <Route path="/" element={<TodosPage />} />
+                <Route path="/profile" element={<TodosPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/todos" element={<TodosPage />} />
+                <Route path="*" element={<PageNotFound />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

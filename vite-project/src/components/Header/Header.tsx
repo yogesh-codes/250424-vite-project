@@ -1,3 +1,5 @@
+import { NavLink, Link } from "react-router-dom";
+
 import "./Header.css";
 import UserMenu from "./UserMenu/UserMenu";
 function Header() {
@@ -12,9 +14,21 @@ function Header() {
                 </div>
                 <div className="">
                     <ul className="navbar-nav d-flex gap-3 mx-5 justify-contents-center">
-                        <li>Todos</li>
-                        <li>Profile</li>
-                        <li>About</li>
+                        <li>
+                            <NavLink to="/todos" className="nav-link">
+                                Todos
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/profile" className="nav-link">
+                                Profile
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about" className="nav-link">
+                                About
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="d-flex justify-contents-right mr-5">

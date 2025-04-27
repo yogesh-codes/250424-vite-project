@@ -1,9 +1,10 @@
-import "./TodoPage.css";
+import "./TodosPage.css";
 import { useEffect, useState } from "react";
 
 //Components
 import TodoItemAdder from "./TodoItemAdder/TodoItemAdder";
 import TodoItemsContainer from "./TodoItemsContainer/TodoItemsContainer";
+import Header from "../Header/Header";
 
 type todoType = { title: string };
 
@@ -23,14 +24,17 @@ function TodoPage() {
     }, [todos]);
 
     return (
-        <section
-            className="container-fluid TodoPage "
-            style={{ maxWidth: "40em" }}
-        >
-            <TodoItemAdder onAddTodo={addTodo} />
-            <div className="mb-2"></div>
-            <TodoItemsContainer todos={todos} />
-        </section>
+        <>
+            <Header></Header>
+            <section
+                className="container-fluid TodoPage "
+                style={{ maxWidth: "40em" }}
+            >
+                <TodoItemAdder onAddTodo={addTodo} />
+                <div className="mb-2"></div>
+                <TodoItemsContainer todos={todos} />
+            </section>
+        </>
     );
 }
 

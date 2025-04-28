@@ -2,7 +2,7 @@ header {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
 
-    min-height: 5em;
+    min-height: 3em;
 }
 
 .nav-link {
@@ -18,7 +18,7 @@ header {
     height: 2px;
 
     left: 0;
-    bottom: 0.4em;
+    bottom: 0em;
 }
 
 .nav-link.active::after {
@@ -47,5 +47,40 @@ header {
     100% {
         background-color: green;
         width: 100%;
+    }
+}
+
+.md-screen * {
+    transition: opacity 1s ease;
+}
+
+@media (max-width: 768px) {
+    .md-screen * {
+        opacity: 0;
+        background-color: red;
+    }
+}
+@media (min-width: 768px) {
+    .md-screen * {
+        opacity: 1;
+        background-color: greenyellow;
+    }
+}
+
+.sm-screen * {
+    transition: opacity 1s ease;
+}
+
+@media (max-width: 768px) {
+    .sm-screen * {
+        opacity: 1;
+        background-color: greenyellow;
+    }
+}
+/* //576s */
+@media (min-width: 768px) {
+    .sm-screen * {
+        opacity: 0;
+        background-color: red;
     }
 }

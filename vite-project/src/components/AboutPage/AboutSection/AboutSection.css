@@ -18,9 +18,14 @@
 .fx:hover::before {
     width: 100%;
     padding-right: 1em;
-    background-color: white;
+    background-color: purple;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.15s ease-out;
+}
+
+section {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
 }

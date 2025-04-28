@@ -12,7 +12,7 @@ function ProfilePage() {
         console.log(user);
         if (!user) {
             console.log(user);
-            alert("Youre not logged in. Redirecting you to login page");
+            console.log("Youre not logged in. Redirecting you to login page");
             navigate("/login");
         } else {
             console.log("Showing profiles page because you're logged in");

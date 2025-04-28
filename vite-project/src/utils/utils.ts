@@ -7,7 +7,7 @@
  * @param maxLength - Maximum allowed length of the returned string (default 20).
  * @returns The possibly-truncated email.
  */
-function shortenEmail(email: string, maxLength: number = 20): string {
+function shortenEmail(email: string, maxLength: number = 15): string {
     if (email.length <= maxLength) {
         return email;
     }

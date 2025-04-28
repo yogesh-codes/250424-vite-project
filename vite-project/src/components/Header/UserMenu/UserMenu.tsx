@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 // import { useAuth } from "../../../context/AuthContext";
 import { useUser } from "@supabase/auth-helpers-react";
 import { shortenEmail } from "../../../utils/utils";
-import { use } from "react";
+
+import "./UserMenu.css";
 
 function UserMenu() {
     let user = useUser();
@@ -30,6 +31,21 @@ function UserMenu() {
                 </svg>
             </Link>
             <div className="">{displayTextUserEmail}</div>
+            {!user && (
+                <div className={user ? "hide" : "show"}>
+                    <Link className="btn btn-sm btn-primary" to="/login">
+                        Login
+                    </Link>
+                </div>
+            )}
+
+            {user && (
+                <div className={user ? "show" : "hide"}>
+                    <Link className="btn btn-sm btn-primary" to="/logout">
+                        Sign Out
+                    </Link>
+                </div>
+            )}
         </div>
     );
 }

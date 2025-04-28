@@ -1,0 +1,20 @@
+.hide > * {
+    animation: do_hide 1s ease 1 forwards;
+    transition: display 1s ease;
+}
+
+@keyframes do_hide {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0.1;
+        display: none;
+    }
+}
+
+.show > * {
+    animation: do_hide reverse ease 1 forwards;
+}

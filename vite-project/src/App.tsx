@@ -11,12 +11,14 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 import UserLoginPage from "./components/UserLoginPage/UserLoginPage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
+import UserLogoutPage from "./components/UserLogoutPage/UserLogoutPage";
 
 function App() {
     return (
         <BrowserRouter basename="/250424-vite-project/">
             <Routes>
                 <Route path="/login" element={<UserLoginPage />} />
+                <Route path="/logout" element={<UserLogoutPage />} />
                 <Route path="/" element={<TodosPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/about" element={<AboutPage />} />

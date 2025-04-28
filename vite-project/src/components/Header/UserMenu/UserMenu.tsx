@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-
-Link;
+import { useAuth } from "../../../context/AuthContext";
 
 function UserMenu() {
+    let user = useAuth();
+
     return (
-        <div className="d-flex">
+        <div className="d-flex align-items-center justify-content-start">
             <Link to="/login" className="btn btn-sm">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +18,7 @@ function UserMenu() {
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                 </svg>
             </Link>
+            <div className="">{`${user ? user?.userName : "Guest"}`}</div>
         </div>
     );
 }

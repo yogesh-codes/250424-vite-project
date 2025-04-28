@@ -10,6 +10,7 @@ import TodosPage from "./components/TodosPage/TodosPage";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import UserLoginPage from "./components/UserLoginPage/UserLoginPage";
 import AboutPage from "./components/AboutPage/AboutPage";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
             <Routes>
                 <Route path="/login" element={<UserLoginPage />} />
                 <Route path="/" element={<TodosPage />} />
-                <Route path="/profile" element={<TodosPage />} />
+                <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/todos" element={<TodosPage />} />
                 <Route path="*" element={<PageNotFound />} />

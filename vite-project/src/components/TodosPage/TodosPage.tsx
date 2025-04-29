@@ -6,7 +6,7 @@ import TodoItemAdder from "./TodoItemAdder/TodoItemAdder";
 import TodoItemsContainer from "./TodoItemsContainer/TodoItemsContainer";
 import Header from "../Header/Header";
 
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 type todoType = { title: string };
 
@@ -27,7 +27,7 @@ function TodoPage() {
 
     return (
         <>
-            <Header></Header>
+            <Header />
             <section
                 className="container-fluid TodoPage"
                 style={{ maxWidth: "40em" }}

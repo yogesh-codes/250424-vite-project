@@ -1,0 +1,14 @@
+.spinner > svg {
+    animation: spin 1s ease infinite;
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}

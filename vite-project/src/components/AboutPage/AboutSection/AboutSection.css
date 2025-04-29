@@ -29,3 +29,11 @@ section {
     border-bottom: 1px solid black;
     margin-bottom: 1em;
 }
+
+h3 {
+    font-size: 1rem;
+}
+
+.about-section ul {
+    list-style-type: square;
+}

@@ -1,9 +1,4 @@
-import {
-    useUser,
-    useSupabaseClient,
-    useSessionContext,
-    SupabaseClient,
-} from "@supabase/auth-helpers-react";
+import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

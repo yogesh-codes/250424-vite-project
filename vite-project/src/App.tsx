@@ -12,6 +12,7 @@ import UserLoginPage from "./components/UserLoginPage/UserLoginPage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
 import UserLogoutPage from "./components/UserLogoutPage/UserLogoutPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     return (
@@ -25,6 +26,10 @@ function App() {
                 <Route path="/todos" element={<TodosPage />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+            ></ToastContainer>
         </BrowserRouter>
     );
 }

@@ -6,6 +6,8 @@ import TodoItemAdder from "./TodoItemAdder/TodoItemAdder";
 import TodoItemsContainer from "./TodoItemsContainer/TodoItemsContainer";
 import Header from "../Header/Header";
 
+import { toast } from "react-toastify";
+
 type todoType = { title: string };
 
 function TodoPage() {
@@ -21,6 +23,7 @@ function TodoPage() {
     useEffect(() => {
         console.log("Updated list of todos are");
         console.log(todos);
+        toast("Hello there");
     }, [todos]);
 
     return (

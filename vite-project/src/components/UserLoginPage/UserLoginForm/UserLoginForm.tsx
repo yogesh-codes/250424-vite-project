@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 //for typing
 import { SignInWithPasswordCredentials } from "@supabase/supabase-js";
+import { toast } from "react-toastify";
 
 function UserLoginForm() {
     const navigate = useNavigate();
@@ -43,7 +44,7 @@ function UserLoginForm() {
 
             // setUserPassword("")
         } else {
-            alert("Login successful! Will redirect to session");
+            toast("Login successful! Redirecting to /todos");
             console.log("User session", data.session);
             navigate("/");
         }

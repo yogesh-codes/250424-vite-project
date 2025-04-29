@@ -1,0 +1,28 @@
+.spec-border {
+    animation: shine 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+.spec-main {
+    animation: shine2 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes shine2 {
+    0% {
+        opacity: 0;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

@@ -36,3 +36,7 @@ ul {
     backdrop-filter: blur(4px);
     min-height: 15em;
 }
+
+.form-control:focus {
+    box-shadow: none;
+}

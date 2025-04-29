@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 
 import EditableTextField from "../EditableTextField/EditableTextField";
 
+const USER_ALIAS = "name";
+
 function ProfilePage() {
     const user = useUser();
     const navigate = useNavigate();
@@ -16,10 +18,12 @@ function ProfilePage() {
         if (!user) {
             console.log(user);
             console.log("Youre not logged in. Redirecting you to login page");
+            toast("Please sign in!");
             navigate("/login");
-            toast("this is a toast");
         } else {
-            console.log("Showing profiles page because you're logged in");
+            console.log(
+                "Redirecting to profiles page because you're logged in"
+            );
         }
     }, []);
     return (
@@ -33,12 +37,44 @@ function ProfilePage() {
                             Email
                         </label>
                         <span>{user.email ?? "no-email"}</span>
-                        <EditableTextField
-                            text="hi there"
-                            placeholder="name"
-                        ></EditableTextField>
-                        <p>What can I call you?</p>
-                        <p></p>
+                        <hr />
+                        <h3>What should I call you?</h3>
+                        <div className="row">
+                            <div className="col-2">
+                                <label
+                                    className="col-form-label"
+                                    htmlFor={USER_ALIAS}
+                                >
+                                    {USER_ALIAS}
+                                </label>
+                            </div>
+                            <div className="col-8">
+                                <EditableTextField
+                                    htmlId="userAlias"
+                                    text="hi there"
+                                    placeholder="name"
+                                ></EditableTextField>
+                            </div>
+                        </div>
+                        <hr />
+                        <h3>What should I call you?</h3>
+                        <div className="row">
+                            <div className="col-2">
+                                <label
+                                    className="col-form-label"
+                                    htmlFor={USER_ALIAS}
+                                >
+                                    {USER_ALIAS}
+                                </label>
+                            </div>
+                            <div className="col-8">
+                                <EditableTextField
+                                    htmlId="userAlias"
+                                    text="hi there"
+                                    placeholder="name"
+                                ></EditableTextField>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

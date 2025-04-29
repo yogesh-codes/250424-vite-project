@@ -23,14 +23,13 @@ function TodoPage() {
     useEffect(() => {
         console.log("Updated list of todos are");
         console.log(todos);
-        toast("Hello there");
     }, [todos]);
 
     return (
         <>
             <Header></Header>
             <section
-                className="container-fluid TodoPage "
+                className="container-fluid TodoPage"
                 style={{ maxWidth: "40em" }}
             >
                 <TodoItemAdder onAddTodo={addTodo} />

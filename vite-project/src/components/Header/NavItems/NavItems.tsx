@@ -8,11 +8,7 @@ function NavItems() {
                     Todos
                 </NavLink>
             </li>
-            <li className="nav-item">
-                <NavLink to="/profile" className="nav-link">
-                    Profile
-                </NavLink>
-            </li>
+
             <li className="nav-item">
                 <NavLink to="/about" className="nav-link">
                     About

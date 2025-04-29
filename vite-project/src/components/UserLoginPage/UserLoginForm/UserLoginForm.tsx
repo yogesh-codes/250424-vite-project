@@ -3,7 +3,6 @@ import { supabase } from "../../../db-auth/supabaseClient";
 import { useNavigate } from "react-router-dom";
 
 //for typing
-import { SignInWithPasswordCredentials } from "@supabase/supabase-js";
 import { toast } from "react-toastify";
 
 function UserLoginForm() {
